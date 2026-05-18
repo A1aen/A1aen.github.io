@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="董天旭（alen）— 程序员个人主页，热衷技术分享" />
+  <meta name="theme-color" content="#0d1117" />
+  <title>dev@alen · 董天旭</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <canvas id="particle-canvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top"><span class="prompt">~/</span>alen</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开菜单">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="#about"><span class="nav-prefix">//</span> about</a>
+        <a href="#skills"><span class="nav-prefix">//</span> stack</a>
+        <a href="#projects"><span class="nav-prefix">//</span> repos</a>
+        <a href="#contact"><span class="nav-prefix">//</span> contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="hero-label"><span class="status-dot"></span> tech sharing</p>
+          <h1>
+            <span class="kw">const</span>
+            <span class="fn"> developer</span>
+            <span class="op"> = </span>
+            <span class="str">"alen"</span><span class="op">;</span>
+            <span class="cmt"> // 董天旭</span>
+          </h1>
+          <p
+            class="hero-tagline typewriter"
+            id="hero-typewriter"
+            data-text="我是一名程序员，热衷于技术分享，乐于把实践与思考整理成文字与代码。"
+            aria-label="个人简介"
+          >
+            <span class="typewriter-text"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-ripple" href="#projects"><span class="btn-icon">$</span> ls ./projects</a>
+            <a class="btn btn-ghost btn-ripple" href="#contact"><span class="btn-icon">$</span> cat contact.txt</a>
+          </div>
+          <ul class="hero-links" aria-label="社交链接">
+            <li><a href="https://github.com/A1aen" target="_blank" rel="noopener noreferrer">github</a></li>
+            <li><a href="mailto:13138089663@163.com">email</a></li>
+          </ul>
+        </div>
+
+        <aside class="terminal" id="profile-terminal" aria-label="简介代码片段">
+          <div class="terminal-bar">
+            <button type="button" class="dot dot-red window-btn" data-action="close" aria-label="关闭窗口"></button>
+            <button type="button" class="dot dot-yellow window-btn" data-action="minimize" aria-label="最小化窗口"></button>
+            <button type="button" class="dot dot-green window-btn" data-action="maximize" aria-label="最大化窗口"></button>
+            <span class="terminal-title">profile.ts</span>
+          </div>
+          <div class="terminal-body-wrap">
+            <pre class="terminal-body"><code><span class="cmt">/** 董天旭 · alen */</span>
+<span class="kw">interface</span> <span class="type">Developer</span> {
+  name: <span class="str">"董天旭"</span>;
+  nick: <span class="str">"alen"</span>;
+  role: <span class="str">"Programmer"</span>;
+  sharing: <span class="bool">true</span>;
+  hiring: <span class="bool">false</span>;
+}
+
+<span class="kw">const</span> me: <span class="type">Developer</span> = {
+  name: <span class="str">"董天旭"</span>,
+  nick: <span class="str">"alen"</span>,
+  role: <span class="str">"程序员"</span>,
+  sharing: <span class="bool">true</span>,
+  hiring: <span class="bool">false</span>,
+};
+
+<span class="fn">console</span>.<span class="fn">log</span>(<span class="str">"分享让技术更有温度"</span>);<span class="cursor code-cursor" aria-hidden="true"></span></code></pre>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="title-cmt">//</span> about.me</h2>
+        <div class="about-grid">
+          <div class="code-panel">
+            <pre><code><span class="fn">function</span> <span class="fn-name">about</span>() {
+  <span class="kw">return</span> {
+    bio: <span class="str">"程序员董天旭（alen），热衷技术分享，用代码与文字记录成长。"</span>,
+    focus: [<span class="str">"编程"</span>, <span class="str">"技术分享"</span>, <span class="str">"开源"</span>],
+    motto: <span class="str">"Share what you learn."</span>,
+  };
+}</code></pre>
+          </div>
+          <ul class="about-facts">
+            <li><span class="fact-key">name</span><span class="fact-val">"董天旭"</span></li>
+            <li><span class="fact-key">nick</span><span class="fact-val">"alen"</span></li>
+            <li><span class="fact-key">status</span><span class="fact-val status-idle">"not_hiring"</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="title-cmt">//</span> tech.stack</h2>
+        <div class="stack-block skill-terminal">
+          <p class="stack-cmd"><span class="prompt">$</span> ./skills-progress.sh --verbose</p>
+          <ul class="skill-progress-list" aria-label="技能熟练度">
+            <li class="skill-progress-item" data-value="90">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">TypeScript</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="TypeScript"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="88">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">JavaScript</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="JavaScript"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="85">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">Python</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Python"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="82">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">React</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="React"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="78">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">Node.js</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Node.js"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="75">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">PostgreSQL</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="PostgreSQL"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+            <li class="skill-progress-item" data-value="72">
+              <p class="skill-cmd-line"><span class="prompt">$</span> progress <span class="skill-name">Docker</span> <span class="skill-status">loading</span> <span class="skill-pct">0%</span></p>
+              <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Docker"><span class="progress-fill"></span><span class="progress-shimmer" aria-hidden="true"></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="title-cmt">//</span> git repos</h2>
+        <p class="section-cmd"><span class="prompt">$</span> gh repo list --limit 3</p>
+        <div class="project-grid">
+          <a class="project-card" href="#top">
+            <header class="card-header">
+              <span class="repo-icon" aria-hidden="true">📁</span>
+              <h3>personal-website</h3>
+              <span class="repo-vis">local</span>
+            </header>
+            <p>程序员主题个人主页：粒子背景、终端动效与技能进度条，纯静态站点（当前页面）。</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <span class="project-link">you are here →</span>
+          </a>
+          <a class="project-card" href="https://github.com/A1aen" target="_blank" rel="noopener noreferrer">
+            <header class="card-header">
+              <span class="repo-icon" aria-hidden="true">📁</span>
+              <h3>A1aen</h3>
+              <span class="repo-vis">profile</span>
+            </header>
+            <p>GitHub 主页：开源仓库与技术分享，欢迎 Star 与交流。</p>
+            <div class="project-tags">
+              <span>Open Source</span><span>Sharing</span>
+            </div>
+            <span class="project-link">view profile →</span>
+          </a>
+          <a class="project-card" href="https://github.com/A1aen?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <header class="card-header">
+              <span class="repo-icon" aria-hidden="true">📁</span>
+              <h3>more-repos</h3>
+              <span class="repo-vis">public</span>
+            </header>
+            <p>更多项目与练习代码，持续更新中。</p>
+            <div class="project-tags">
+              <span>Repos</span>
+            </div>
+            <span class="project-link">browse repos →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="title-cmt">//</span> contact.sh</h2>
+        <div class="contact-terminal">
+          <p><span class="prompt">$</span> ./send-message.sh</p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-key">EMAIL</span>=<a href="mailto:13138089663@163.com">"13138089663@163.com"</a>
+            </li>
+            <li>
+              <span class="contact-key">GITHUB</span>=<a href="https://github.com/A1aen" target="_blank" rel="noopener noreferrer">"github.com/A1aen"</a>
+            </li>
+          </ul>
+          <p class="contact-hint"><span class="cmt"># 复制邮箱或直接点击链接</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span class="prompt">$</span> echo "© <span id="year"></span> 董天旭 (alen) · Built with HTML/CSS/JS"</p>
+    </div>
+  </footer>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
